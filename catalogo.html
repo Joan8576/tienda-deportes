@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tienda Deportiva — Catálogo</title>
+    <link rel="stylesheet" href="base.css">
+  <link rel="stylesheet" href="styles.css">
+<body class="site">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="brand"><a href="index.html">Tienda Deportiva</a></h1>
+      <nav aria-label="Navegación principal">
+        <ul class="nav">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="catalogo.html">Catálogo</a></li>
+          <li><a href="contacto.html">Sobre nosotros / Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container" tabindex="-1">
+    <h2 id="cat-title">Catálogo de Productos</h2>
+          <!--  Carrito -->
+      <section id="carrito" class="carrito">
+        <h3>🛒 Carrito de Compras</h3>
+        <ul id="lista-carrito"></ul>
+        <p id="total"><strong>Total:</strong> ₡0</p>
+        <button id="vaciar" class="btn">Vaciar carrito</button>
+      </section>
+      
+      <!--  Árbol de categorías -->
+      <section id="arbol" class="arbol">
+        <h3>Categorías</h3>
+        <ul id="tree" class="tree" role="tree"></ul>
+        <p id="tree-error" class="error" hidden>Error cargando categorías </p>
+      </section>
+
+
+    <div class="controls">
+      <input id="filtro" type="search" placeholder="Filtrar por nombre…" aria-label="Filtrar productos">
+      <select id="orden" aria-label="Ordenar productos">
+        <option value="az">A-Z</option>
+        <option value="za">Z-A</option>
+        <option value="precio-asc">Precio ↑</option>
+        <option value="precio-desc">Precio ↓</option>
+      </select>
+    </div>
+
+    <ul id="lista" class="lista" aria-live="polite"></ul>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© 2025 Tienda Deportiva — Joan Alonso Flores Villalobos</small>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+  <script src="tree.js"></script>
+</body>
+</html>
